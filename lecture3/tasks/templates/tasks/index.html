@@ -1,0 +1,14 @@
+<!--Template inheritance in Django-->
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+        <h1>My Tasks:</h1>
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% empty %}
+                <li>You currently have zero task.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'tasks:add' %}">Click here to add new tasks.</a>
+{% endblock %}
