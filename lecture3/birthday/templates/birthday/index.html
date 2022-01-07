@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Olamide Ilori's birthday!</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 50px;
+                font-weight: bold;
+                color: darkorange;
+            }
+        </style>
+    </head>
+    <body>
+        {% if birthday %}
+            <h1>Happy birthday, Olamide!</h1>
+            <img src="olamide-ilori.jpeg" alt="Olamide Ilori's picture">
+        {% else %}
+            <h1>Today is not Olamide's birthday.</h1>
+        {% endif %}
+    </body>
+</html>

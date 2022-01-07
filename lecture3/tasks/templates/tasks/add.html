@@ -1,0 +1,13 @@
+<!--Template inheritance in Django-->
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+        <h1>Add new tasks here.</h1>
+        <form action="{% url 'tasks:add' %}" method="post">
+            {% csrf_token %}
+            <!--plug in Django form here-->
+            {{ form }}
+            <input type="submit">
+        </form>
+        <a href="{% url 'tasks:index' %}">Click here to view tasks.</a>
+{% endblock %}
